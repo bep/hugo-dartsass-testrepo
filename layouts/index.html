@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML 5 Boilerplate</title>
+    {{ $opts := dict "transpiler" "dartsass" }}
+    {{ $scss := resources.Get "scss/styles.scss" }}
+    {{ $styles := $scss | resources.ToCSS $opts }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+  </head>
+  <body>
+    <h1>If this is blue, it's working.</h1>
+  </body>
+</html>

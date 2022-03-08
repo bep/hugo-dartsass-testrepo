@@ -1,0 +1,6 @@
+baseURL="https://example.org"
+
+disableKinds = ["page", "section", "taxonomy", "term"]
+
+[outputs]
+home=["HTML"]
